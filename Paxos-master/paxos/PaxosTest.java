@@ -113,6 +113,7 @@ public class PaxosTest {
         pxa[0].Start(6, 600);
         pxa[1].Start(5, 500);
         waitn(pxa, 7, npaxos);
+
         pxa[0].Start(4, 400);
         pxa[1].Start(3, 300);
         waitn(pxa, 6, npaxos);
@@ -120,9 +121,11 @@ public class PaxosTest {
         waitn(pxa, 4, npaxos);
         waitn(pxa, 3, npaxos);
         System.out.println("... Passed");
+
         cleanup(pxa);
 
     }
+
 
     @Test
     public void TestDeaf(){
@@ -229,6 +232,5 @@ public class PaxosTest {
 
 
     }
-
 
 }

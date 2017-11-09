@@ -10,6 +10,12 @@ public class Response implements Serializable {
     static final long serialVersionUID=22L;
     // your data here
 
+    boolean succ;
+    Op op;
 
     // Your constructor and methods here
+    public Response(boolean succ, Op op) {
+    	this.succ = succ;
+    	this.op = op;
+    }
 }

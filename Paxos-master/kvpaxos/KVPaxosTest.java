@@ -34,8 +34,11 @@ public class KVPaxosTest {
         Client ck = new Client(peers, ports);
         System.out.println("Test: Basic put/get ...");
         ck.Put("app", 6);
+	System.out.println("PUT app 6");
         check(ck, "app", 6);
+	System.out.println("Check app 6");
         ck.Put("a", 70);
+	System.out.println("PUT a 70");
         check(ck, "a", 70);
 
         System.out.println("... Passed");
